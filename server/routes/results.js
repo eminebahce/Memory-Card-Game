@@ -5,7 +5,7 @@ const historyDb = [];
 const history = {
     timeStamp: '',
     numbers: [],
-    gameResult: false
+    gameResult: ""
 }
 
 router.get('/', function(req, res, next) {
@@ -14,6 +14,7 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
     historyDb.push(req.body);
+    //res.status(204).json({ gameResult: history.gameResult });
     res.status(204).json();
 });
 
