@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <Card />
+    <div class="container">
+      <Card />
+    </div>
   </div>
 </template>
 
@@ -12,6 +14,24 @@ export default {
   components: {
     Card,
   },
+  data() {
+    return {
+      // randomNumbers: [23,15,1,16],
+      // sortedRandomNumbers:[1,15,16,23] 
+    }
+  },
+  created() {
+
+  },
+  methods: {
+    fetchRandomNumbers() {
+      //will be fetch random numbers
+    },
+
+    fetchCardOffer() {
+      //will be fetch card offer
+    }
+  }
 };
 </script>
 
@@ -48,5 +68,20 @@ body {
     background-attachment: fixed;
     padding: 0.8em; 
   }
+
+.container {
+ background-color: rgba(16, 18, 27, 0.4);
+ max-width: 1250px;
+ max-height: 860px;
+ height: 80vh;
+ display: flex;
+ flex-direction: column;
+ overflow: hidden;
+ width: 100%;
+ border-radius: 14px;
+ backdrop-filter: blur(20px);
+ -webkit-backdrop-filter: blur(20px);
+ padding-left: 60px;
+}
 }
 </style>
