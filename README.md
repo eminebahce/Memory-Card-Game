@@ -56,6 +56,17 @@ npm run build
 npm run lint
 ```
 
+### Running tests
+```
+### For Client side
+
+npm run test:unit
+
+### For Server side
+
+npm run test
+```
+
 ### Project URLs
 
 ```
