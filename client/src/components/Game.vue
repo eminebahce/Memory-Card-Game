@@ -2,7 +2,7 @@
   <div class="card-content-section">
     <div class="card-content-section-title">Power up your memory</div>
     <div v-if="!gameStep" class="card-content-section-title">
-      Please select a card size.
+      Please select the number of the cards
     </div>
     <div
       v-if="gameStep && !gameResult"
