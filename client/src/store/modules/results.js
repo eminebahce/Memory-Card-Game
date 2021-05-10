@@ -11,21 +11,31 @@ const state = {
 
 const actions = {
     storeResult({ commit }, request) {
-        console.log(request)
         return url
             .post("/results", request)
-            .then(() => {
-                commit("checkResponse", request.gameResult);
+            .then((response) => {
+                commit("checkResponse", response);
             })
             .catch((error) => console.log(error));
     },
+
+    getResults({ commit }) {
+        return url.get('/results')
+            .then(response => {
+                commit('loadResults', response.data)
+            })
+            .catch(error => console.log(error))
+    }
 };
 
 const mutations = {
-    checkResponse(state, payload) {
-        state.gameResult = payload
-        console.log('XXXXX', state.gameResult)
+    checkResponse() {
+        //nothing to return
     },
+
+    loadResults(state, payload) {
+        state.history = payload;
+    }
 };
 
 export default {

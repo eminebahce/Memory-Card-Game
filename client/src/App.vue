@@ -1,37 +1,20 @@
 <template>
   <div id="app">
     <div class="container">
-      <Card />
+      <Game />
     </div>
   </div>
 </template>
 
 <script>
-import Card from "./components/Card.vue";
+import Game from "./components/Game.vue";
 
 export default {
   name: "App",
   components: {
-    Card,
+    Game,
   },
-  data() {
-    return {
-      // randomNumbers: [23,15,1,16],
-      // sortedRandomNumbers:[1,15,16,23] 
-    }
-  },
-  created() {
 
-  },
-  methods: {
-    fetchRandomNumbers() {
-      //will be fetch random numbers
-    },
-
-    fetchCardOffer() {
-      //will be fetch card offer
-    }
-  }
 };
 </script>
 
@@ -73,7 +56,6 @@ body {
  background-color: rgba(16, 18, 27, 0.4);
  max-width: 1250px;
  max-height: 860px;
- height: 80vh;
  display: flex;
  flex-direction: column;
  overflow: hidden;
@@ -81,7 +63,8 @@ body {
  border-radius: 14px;
  backdrop-filter: blur(20px);
  -webkit-backdrop-filter: blur(20px);
- padding-left: 60px;
+ justify-content: center;
+ align-items: center;
 }
 }
 </style>
