@@ -7,7 +7,12 @@ router.get('/', function(req, res, next) {
     for (i = 0; i < selectedNumber; i++) {
         randomNumbers.push(Math.floor(Math.random() * 100))
     }
-    res.status(200).json({ randomNumbers: randomNumbers });
+    let sortedNumbers = randomNumbers.map(x => x).sort(numberSort)
+    res.status(200).json({ randomNumbers: randomNumbers, sortedNumbers: sortedNumbers  });
 });
+
+numberSort = function (a,b) {
+    return a - b;
+};
 
 module.exports = router;

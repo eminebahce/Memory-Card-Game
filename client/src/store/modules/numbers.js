@@ -6,6 +6,7 @@ export const url = axios.create({ baseURL: baseURL });
 
 const state = {
     randomNumbers: [],
+    sortedNumbers: []
 };
 
 const actions = {
@@ -23,6 +24,7 @@ const actions = {
 const mutations = {
     loadRandomNumbers(state, payload) {
         state.randomNumbers = payload.randomNumbers;
+        state.sortedNumbers = payload.sortedNumbers;
     }
 };
 
