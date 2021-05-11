@@ -3,6 +3,16 @@
 ## Project Content
 
 Memory card game starting by offerring selection of cards ([4, 8, 12]). By cliking of the each card, random set of numbers retrieving from backend via api call. At this stage user expecting to order the cards after first seen of them. When the game finishes, gaming history is storing. 
+
+## Versions of npm and nodejs
+
+```
+npm version
+6.14.9
+
+node version
+v12.18.0
+```
 ## Tech Stack
 
 ```
